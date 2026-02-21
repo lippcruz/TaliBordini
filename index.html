@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enfermeira Pediatrica, Consultora em Amamentacao e Laserterapia. Onde ciencia e colo se encontram. Coxim - MS.">
+  <meta name="keywords" content="enfermeira pediatrica, amamentacao, laserterapia, consultora, coxim">
+  <meta name="theme-color" content="#ece4dc">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Tali Bordini">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>Tali Bordini | Enfermeira Pediatrica - Amamentação e Laserterapia</title>
+  
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="Tali Bordini | Enfermeira Pediatrica">
+  <meta property="og:description" content="Consultora em Amamentação e Laserterapia. Onde ciência e colo se encontram.">
+  <meta property="og:type" content="website">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --background: 25 20% 94%;
+      --foreground: 15 10% 20%;
+      --card: 30 18% 97%;
+      --card-foreground: 15 10% 20%;
+      --primary: 4 42% 66%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 25 16% 88%;
+      --secondary-foreground: 15 10% 20%;
+      --muted: 25 12% 90%;
+      --muted-foreground: 15 6% 48%;
+      --border: 25 12% 86%;
+      --ring: 4 42% 66%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 16px;
+    }
+
+    /* Acessibilidade: Remover foco visível para mouse, manter para teclado */
+    a, button {
+      outline-offset: 2px;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid hsl(var(--primary));
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: hsl(var(--border));
+      border-radius: 4px;
+    }
+
+    /* Skip Link para Acessibilidade */
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .skip-link:focus-visible {
+      outline: 2px solid hsl(var(--background));
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: hsl(var(--muted-foreground));
+    }
+
+    /* Typography */
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .font-script {
+      font-family: 'Dancing Script', cursive;
+    }
+
+    body {
+      color: hsl(var(--foreground));
+    }
+
+    /* Utilities */
+    .container {
+      width: 100%;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 2rem;
+      }
+    }
+
+    .text-primary {
+      color: hsl(var(--primary));
+    }
+
+    .bg-primary {
+      background-color: hsl(var(--primary));
+    }
+
+    .text-primary-foreground {
+      color: hsl(var(--primary-foreground));
+    }
+
+    .bg-primary-foreground {
+      background-color: hsl(var(--primary-foreground));
+    }
+
+    .bg-card {
+      background-color: hsl(var(--card));
+    }
+
+    .bg-secondary {
+      background-color: hsl(var(--secondary));
+    }
+
+    .text-muted-foreground {
+      color: hsl(var(--muted-foreground));
+    }
+
+    .bg-border {
+      background-color: hsl(var(--border));
+    }
+
+    .border-border {
+      border-color: hsl(var(--border));
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      transition: all 0.5s ease;
+    }
+
+    header.scrolled {
+      background-color: hsla(var(--background), 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      padding: 0.75rem 0;
+    }
+
+    header:not(.scrolled) {
+      background-color: transparent;
+      padding: 1.25rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .header-content {
+        padding: 0 2rem;
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      text-decoration: none;
+      color: hsl(var(--primary));
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: hsl(var(--primary));
+    }
+
+    .logo svg {
+      color: hsl(var(--primary));
+      width: 26px;
+      height: 32px;
+    }
+
+    nav.desktop-nav {
+      display: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      nav.desktop-nav {
+        display: flex;
+      }
+    }
+
+    nav.desktop-nav a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: hsl(var(--muted-foreground));
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0.75rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav.desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: hsl(var(--primary));
+      transition: width 0.3s ease;
+    }
+
+    nav.desktop-nav a:hover {
+      color: hsl(var(--primary));
+    }
+
+    nav.desktop-nav a:hover::after {
+      width: 100%;
+    }
+
+    .cta-btn {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 9999px;
+      background-color: hsl(var(--primary));
+      padding: 0.75rem 1.5rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: hsl(var(--primary-foreground));
+      text-decoration: none;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    .cta-btn:hover {
+      background-color: hsl(4 42% 56%);
+      box-shadow: 0 20px 25px -5px rgba(218, 99, 68, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .cta-btn {
+        display: inline-flex;
+      }
+    }
+
+    .menu-btn {
+      display: flex;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: hsl(var(--foreground));
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      background-color: hsla(var(--card), 0.98);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid hsl(var(--border));
+      padding: 1.5rem;
+      margin-top: 0;
+    }
+
+    .mobile-menu.open {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    .mobile-menu nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .mobile-menu a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: hsl(var(--muted-foreground));
+      text-decoration: none;
+      transition: color 0.3s ease;
+      padding: 0.75rem 0.5rem;
+      display: block;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .mobile-menu a:hover {
+      color: hsl(var(--primary));
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out both;
+    }
+
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    .animation-delay-200 { animation-delay: 0.2s; }
+    .animation-delay-400 { animation-delay: 0.4s; }
+    .animation-delay-600 { animation-delay: 0.6s; }
+    .animation-delay-800 { animation-delay: 0.8s; }
+
+    /* Section: Hero */
+    #inicio {
+      position: relative;
+      min-height: 100vh;
+      padding: 7rem 1.5rem 4rem;
+      overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      #inicio {
+        padding: 7rem 2rem 4rem;
+      }
+    }
+
+    .hero-decorations::before {
+      content: '';
+      position: absolute;
+      right: -8%;
+      top: 10%;
+      height: 320px;
+      width: 320px;
+      border-radius: 50%;
+      background-color: hsla(var(--primary), 0.04);
+    }
+
+    .hero-decorations::after {
+      content: '';
+      position: absolute;
+      left: -5%;
+      bottom: 15%;
+      height: 208px;
+      width: 208px;
+      border-radius: 50%;
+      border: 1px solid hsla(var(--primary), 0.08);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content {
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+        min-height: 75vh;
+        margin-bottom: 0;
+      }
+    }
+
+    .hero-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-text {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+
+    .hero-logo {
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .hero-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5rem;
+      color: hsl(var(--primary));
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 4.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 5.5rem;
+        text-align: left;
+      }
+    }
+
+    .hero-tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: hsl(var(--primary));
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .hero-divider {
+      height: 1px;
+      width: 64px;
+      background-color: hsla(var(--primary), 0.2);
+      margin: 2rem auto 2rem 0;
+    }
+
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: hsl(var(--foreground));
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-subtitle {
+        font-size: 1.875rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: hsl(var(--primary));
+      margin-bottom: 2.5rem;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .credentials-box {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      border-radius: 1rem;
+      background-color: hsl(var(--primary));
+      padding: 1.75rem 2rem;
+      text-align: left;
+      color: hsl(var(--primary-foreground));
+      box-shadow: 0 20px 25px -5px rgba(218, 99, 68, 0.15);
+      animation: fadeInUp 0.8s ease-out both;
+      animation-delay: 0.8s;
+    }
+
+    .credentials-box ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      list-style: none;
+    }
+
+    .credentials-box li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .credentials-box li::before {
+      content: '';
+      display: inline-block;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: hsla(var(--primary-foreground), 0.5);
+    }
+
+    .hero-image {
+      flex: 1;
+      animation: fadeIn 0.6s ease-out both;
+      animation-delay: 0.4s;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 336px;
+      height: auto;
+      border-radius: 2rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-image img {
+        max-width: 448px;
+      }
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator a {
+      color: hsla(var(--primary), 0.4);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .scroll-indicator a:hover {
+      color: hsla(var(--primary), 0.7);
+    }
+
+    /* Sections */
+    section {
+      padding: 6rem 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 8rem 2rem;
+      }
+    }
+
+    section > .container > h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.875rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      section > .container > h2 {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      section > .container > h2 {
+        font-size: 2.75rem;
+      }
+    }
+
+    section > .container > .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: hsl(var(--primary));
+      margin-bottom: 0.5rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: hsl(var(--primary));
+      margin-bottom: 0.5rem;
+    }
+
+    section > .container > h2 {
+      margin-top: 0;
+    }
+
+    section > .container > p {
+      margin-top: 1.25rem;
+      text-align: center;
+      color: hsl(var(--muted-foreground));
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* About Section */
+    #sobre {
+      padding: 4rem 1.5rem 6rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      #sobre {
+        padding: 6rem 2rem;
+      }
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .about-content {
+        flex-direction: row;
+        gap: 5rem;
+        align-items: center;
+      }
+    }
+
+    .about-image {
+      flex-shrink: 0;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 288px;
+      height: auto;
+      border-radius: 2rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+
+    @media (min-width: 1024px) {
+      .about-image img {
+        max-width: 320px;
+      }
+    }
+
+    .about-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-text {
+        text-align: left;
+      }
+    }
+
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.875rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+      margin-top: 0.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .about-text h2 {
+        font-size: 2.75rem;
+      }
+    }
+
+    .about-text p {
+      margin-top: 1.5rem;
+      line-height: 1.75;
+      color: hsl(var(--muted-foreground));
+      max-width: 448px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      .about-text p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .credentials-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .credentials-grid {
+        justify-content: flex-start;
+      }
+    }
+
+    .credential-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 9999px;
+      background-color: hsl(var(--secondary));
+      padding: 0.625rem 1.125rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: hsl(var(--foreground));
+    }
+
+    .credential-badge svg {
+      width: 14px;
+      height: 14px;
+      color: hsl(var(--primary));
+    }
+
+    /* Services Section */
+    #servicos {
+      background-color: hsl(var(--card));
+      padding: 4rem 1.5rem 6rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      #servicos {
+        padding: 6rem 2rem;
+      }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .service-card {
+      border-radius: 1.875rem;
+      background-color: hsl(var(--card));
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card-image {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .service-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-card-image img {
+      transform: scale(1.05);
+    }
+
+    .service-card-content {
+      padding: 2rem;
+    }
+
+    .service-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 0.75rem;
+      background-color: hsla(var(--primary), 0.1);
+      color: hsl(var(--primary));
+    }
+
+    .service-card-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: hsl(var(--foreground));
+      margin-top: 1rem;
+    }
+
+    .service-card ul {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      list-style: none;
+    }
+
+    .service-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .service-card li::before {
+      content: '';
+      display: inline-block;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: hsla(var(--primary), 0.5);
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Featured Service */
+    .featured-service {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-radius: 1.875rem;
+      background-color: hsl(var(--card));
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .featured-service {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .featured-image {
+      position: relative;
+      width: 100%;
+      height: 256px;
+      overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      .featured-image {
+        height: auto;
+      }
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+      .featured-content {
+        padding: 3rem;
+      }
+    }
+
+    .featured-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: hsl(var(--foreground));
+      margin-top: 1.25rem;
+    }
+
+    .featured-content ul {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      list-style: none;
+    }
+
+    .featured-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .featured-content li::before {
+      content: '';
+      display: inline-block;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: hsla(var(--primary), 0.5);
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Testimonials Section */
+    #depoimentos {
+      background-color: hsla(var(--secondary), 0.5);
+      padding: 4rem 1.5rem 6rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      #depoimentos {
+        padding: 6rem 2rem;
+      }
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem;
+      background-color: hsl(var(--card));
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-icon {
+      color: hsla(var(--primary), 0.2);
+      width: 32px;
+      height: 32px;
+    }
+
+    .testimonial-text {
+      margin-top: 1rem;
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .star-rating {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .star-rating svg {
+      width: 14px;
+      height: 14px;
+      color: hsla(var(--primary), 0.8);
+      fill: hsla(var(--primary), 0.8);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-top: 1px solid hsl(var(--border));
+      margin-top: 1rem;
+      padding-top: 1.25rem;
+    }
+
+    .author-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background-color: hsla(var(--primary), 0.1);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: hsl(var(--primary));
+      flex-shrink: 0;
+    }
+
+    .author-info h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: hsl(var(--foreground));
+    }
+
+    .author-info p {
+      font-size: 0.75rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .testimonials-carousel {
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      .testimonials-grid {
+        display: none;
+      }
+
+      .testimonials-carousel {
+        display: block;
+        margin-top: 3.5rem;
+      }
+    }
+
+    .carousel-card {
+      border-radius: 1rem;
+      background-color: hsl(var(--card));
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .carousel-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      border: 2px solid hsl(var(--border));
+      background-color: transparent;
+      color: hsl(var(--foreground));
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      font-weight: 600;
+    }
+
+    .carousel-btn:hover {
+      background-color: hsl(var(--card));
+      border-color: hsl(var(--primary));
+      color: hsl(var(--primary));
+    }
+
+    .carousel-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .carousel-dot {
+      height: 6px;
+      border-radius: 9999px;
+      background-color: hsl(var(--border));
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-dot.active {
+      width: 24px;
+      background-color: hsl(var(--primary));
+    }
+
+    .carousel-dot:not(.active) {
+      width: 6px;
+    }
+
+    /* Contact Section */
+    #contato {
+      background-color: hsl(var(--background));
+      padding: 4rem 1.5rem 6rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      #contato {
+        padding: 6rem 2rem;
+      }
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-content {
+        flex-direction: row;
+        gap: 5rem;
+        align-items: center;
+      }
+    }
+
+    .contact-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-text {
+        text-align: left;
+      }
+    }
+
+    .contact-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.875rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+      margin-top: 0.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-text h3 {
+        font-size: 2.75rem;
+      }
+    }
+
+    .contact-text p {
+      margin-top: 1.25rem;
+      line-height: 1.65;
+      color: hsl(var(--muted-foreground));
+      max-width: 448px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-text p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .contact-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .contact-cards {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 1rem;
+      background-color: hsl(var(--card));
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.3s ease;
+      min-height: 60px;
+    }
+
+    .contact-card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 0.75rem;
+      background-color: hsla(var(--primary), 0.1);
+      color: hsl(var(--primary));
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .contact-card:hover .contact-icon {
+      background-color: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .contact-info h4 {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .contact-info p {
+      margin-top: 0.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: hsl(var(--foreground));
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .cta-section {
+      width: 100%;
+      max-width: 448px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-box {
+      position: relative;
+      width: 100%;
+      border-radius: 1.875rem;
+      background-color: hsl(var(--primary));
+      padding: 2.5rem;
+      text-align: center;
+      color: hsl(var(--primary-foreground));
+      box-shadow: 0 20px 25px -5px rgba(218, 99, 68, 0.15);
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      right: -32px;
+      bottom: -32px;
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      background-color: hsla(var(--primary-foreground), 0.06);
+    }
+
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: hsla(var(--primary-foreground), 0.04);
+    }
+
+    .cta-box-content {
+      position: relative;
+    }
+
+    .cta-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 9999px;
+      background-color: hsla(var(--primary-foreground), 0.15);
+      margin: 0 auto;
+    }
+
+    .cta-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .cta-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+    }
+
+    .cta-box p {
+      margin-top: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: hsla(var(--primary-foreground), 0.75);
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      border-radius: 9999px;
+      background-color: hsl(var(--primary-foreground));
+      padding: 1rem 2.25rem;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: hsl(var(--primary));
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+      min-height: 44px;
+    }
+
+    .cta-button:hover {
+      background-color: hsl(25 20% 93%);
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .cta-box-footer {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: hsla(var(--primary-foreground), 0.5);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid hsl(var(--border));
+      padding: 2.5rem 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      footer {
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: hsl(var(--primary));
+    }
+
+    .footer-logo svg {
+      width: 20px;
+      height: 26px;
+    }
+
+    .footer-logo-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.125rem;
+      color: hsl(var(--primary));
+    }
+
+    footer nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    footer nav a {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: hsl(var(--muted-foreground));
+      text-decoration: none;
+      transition: color 0.3s ease;
+      padding: 0.5rem;
+      display: inline-block;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    footer nav a:hover {
+      color: hsl(var(--primary));
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      border: 2px solid hsl(var(--border));
+      color: hsl(var(--muted-foreground));
+      text-decoration: none;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .social-link:hover {
+      border-color: hsl(var(--primary));
+      color: hsl(var(--primary));
+    }
+
+    .social-link svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid hsl(var(--border));
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8125rem;
+      letter-spacing: 0.05em;
+      color: hsl(var(--muted-foreground));
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link para acessibilidade -->
+  <a href="#main-content" class="skip-link" style="position: absolute; top: -40px; left: 0; background: hsl(var(--primary)); color: white; padding: 0.5rem 1rem; text-decoration: none; z-index: 100; border-radius: 0 0 4px 0;">Pular para conteúdo principal</a>
+  
+  <!-- Header -->
+  <header id="header" role="banner">
+    <div class="header-content">
+      <a href="#inicio" class="logo">
+        <svg viewBox="0 0 28 34" fill="none">
+          <path d="M14 2C14 2 2 14 2 20a12 12 0 0024 0C26 14 14 2 14 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M10 18c0 0 2 6 6 6s4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+        </svg>
+        <span class="logo-text">Tali Bordini</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Servicos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="cta-btn">
+        <span>📱</span>
+        Agendar
+      </a>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu de navegacao" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Servicos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="cta-btn" style="margin-top: 1rem; width: 100%; text-align: center;">
+        <span>📱</span>
+        Agendar Consulta
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-decorations" role="region" aria-label="Apresentacao">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-logo">
+          <svg width="52" height="64" viewBox="0 0 28 34" fill="none">
+            <path d="M14 2C14 2 2 14 2 20a12 12 0 0024 0C26 14 14 2 14 2z" stroke="currentColor" stroke-width="1" fill="none"/>
+            <path d="M10 18c0 0 2 6 6 6s4-4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <h1 class="hero-title animate-fade-in-up">Tali Bordini</h1>
+        <p class="hero-tagline animate-fade-in-up animation-delay-200">Onde ciencia e colo se encontram</p>
+
+        <div class="hero-divider animate-fade-in animation-delay-400"></div>
+
+        <div class="animate-fade-in-up animation-delay-600">
+          <h2 class="hero-subtitle">Enfermeira</h2>
+          <p class="hero-description">Consultora em Amamentacao e Laserterapia</p>
+        </div>
+
+        <div class="credentials-box">
+          <ul>
+            <li>Enfermeira Pediatrica</li>
+            <li>Mestre em Saude Publica</li>
+            <li>Doutoranda em Enfermagem na Atencao a Saude</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23e5d7cc'/%3E%3Ctext x='50%25' y='50%25' font-size='24' text-anchor='middle' dy='.3em' fill='%23999'%3ESeu Retrato Aqui%3C/text%3E%3C/svg%3E" alt="Tali Bordini, Enfermeira Pediatrica, Consultora em Amamentacao e Laserterapia">
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <a href="#sobre" aria-label="Rolar para baixo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre" role="region" aria-label="Sobre Tali Bordini">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 360'%3E%3Crect width='288' height='360' fill='%23e5d7cc'/%3E%3Ctext x='50%25' y='50%25' font-size='20' text-anchor='middle' dy='.3em' fill='%23999'%3ESeu Retrato Aqui%3C/text%3E%3C/svg%3E" alt="Tali Bordini em ambiente de atendimento pediatrico">
+        </div>
+
+        <div class="about-text">
+          <span class="section-label">Sobre</span>
+          <h2>Dedicacao e empatia em cada atendimento</h2>
+          <p>Sou Tali Bordini, enfermeira pediatrica e consultora em amamentacao e laserterapia. Com formacao academica solida e experiencia pratica, ofereco um atendimento acolhedor, humano e baseado em evidencias cientificas.</p>
+          <p>Minha missao e unir ciencia e colo para cuidar de voce e da sua familia, desde o pre-natal ate o desenvolvimento do seu bebe.</p>
+
+          <div class="credentials-grid">
+            <div class="credential-badge">
+              <span>❤️</span>
+              Enfermeira Pediatrica
+            </div>
+            <div class="credential-badge">
+              <span>🎓</span>
+              Mestre em Saude Publica
+            </div>
+            <div class="credential-badge">
+              <span>📚</span>
+              Doutoranda em Enfermagem
+            </div>
+            <div class="credential-badge">
+              <span>⭐</span>
+              Consultora Certificada
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicos" role="region" aria-label="Servicos oferecidos">
+    <div class="container">
+      <span class="section-label">Servicos</span>
+      <h2>Como posso cuidar de voce</h2>
+      <p>Atendimento especializado e humanizado, sempre unindo ciencia e acolhimento.</p>
+
+      <div class="featured-service">
+        <div class="featured-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e5d7cc'/%3E%3Ctext x='50%25' y='50%25' font-size='20' text-anchor='middle' dy='.3em' fill='%23999'%3EConsultoria em Amamentacao%3C/text%3E%3C/svg%3E" alt="Consultoria em amamentacao com especialista em psicopedagogia">
+        </div>
+        <div class="featured-content">
+          <div class="service-card-icon">
+            <span>👶</span>
+          </div>
+          <h3>Consultoria em Amamentacao</h3>
+          <ul>
+            <li>Pre-natal em amamentacao</li>
+            <li>Primeira mamada</li>
+            <li>Avaliacao da pega e posicao</li>
+            <li>Manejo da dor</li>
+            <li>Fissuras, ingurgitamento e mastite</li>
+            <li>Relactacao e translactacao</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320'%3E%3Crect width='400' height='320' fill='%23e5d7cc'/%3E%3Ctext x='50%25' y='50%25' font-size='18' text-anchor='middle' dy='.3em' fill='%23999'%3EEnfermagem Pediatrica%3C/text%3E%3C/svg%3E" alt="Servico de enfermagem pediatrica com atencao personalizada">
+          </div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <span>💧</span>
+            </div>
+            <h3>Enfermagem Pediatrica</h3>
+            <ul>
+              <li>Preparo da chegada do bebe</li>
+              <li>Cuidado ao recem-nascido</li>
+              <li>Apoio no pos-parto</li>
+              <li>Crescimento e desenvolvimento</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320'%3E%3Crect width='400' height='320' fill='%23e5d7cc'/%3E%3Ctext x='50%25' y='50%25' font-size='18' text-anchor='middle' dy='.3em' fill='%23999'%3ELaserterapia%3C/text%3E%3C/svg%3E" alt="Tratamento de laserterapia especializado para cuidado pediatrico">
+          </div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <span>⚡</span>
+            </div>
+            <h3>Laserterapia</h3>
+            <ul>
+              <li>Fissuras mamilares</li>
+              <li>Alivio da dor</li>
+              <li>Cicatrizacao</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="depoimentos" role="region" aria-label="Depoimentos de clientes">
+    <div class="container">
+      <span class="section-label">Depoimentos</span>
+      <h2>O que dizem sobre meu trabalho</h2>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+          </svg>
+          <p class="testimonial-text">"A Tali foi essencial nos primeiros dias com meu bebe. Sua orientacao sobre amamentacao me deu seguranca e tranquilidade. Profissional incrivel e muito acolhedora."</p>
+          <div class="star-rating">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">C</div>
+            <div class="author-info">
+              <h4>Camila R.</h4>
+              <p>Mae de primeira viagem</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+          </svg>
+          <p class="testimonial-text">"Sofria com fissuras mamilares e a laserterapia com a Tali fez toda a diferenca. Alivio da dor e cicatrizacao rapida. Recomendo demais!"</p>
+          <div class="star-rating">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <h4>Juliana M.</h4>
+              <p>Paciente de Laserterapia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+          </svg>
+          <p class="testimonial-text">"Tali me acompanhou durante todo o processo de relactacao. Sua paciencia, conhecimento e carinho foram fundamentais. Onde ciencia e colo realmente se encontram."</p>
+          <div class="star-rating">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div class="author-info">
+              <h4>Patricia S.</h4>
+              <p>Mae em relactacao</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Carousel -->
+      <div class="testimonials-carousel">
+        <div class="carousel-card" id="carousel-card" aria-live="polite" aria-label="Depoimento de cliente">
+          <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"/>
+          </svg>
+          <p class="testimonial-text" id="carousel-text"></p>
+          <div class="star-rating" id="carousel-stars"></div>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="carousel-avatar"></div>
+            <div class="author-info">
+              <h4 id="carousel-name"></h4>
+              <p id="carousel-role"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prev-btn" aria-label="Depoimento anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <button class="carousel-btn" id="next-btn" aria-label="Proximo depoimento">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" role="region" aria-label="Informacoes de contato">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-text">
+          <span class="section-label">Contato</span>
+          <h3>Vamos conversar?</h3>
+          <p>Entre em contato para agendar uma consulta ou tirar suas duvidas. Estou disponivel para cuidar de voce e da sua familia.</p>
+
+          <div class="contact-cards">
+            <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h4>WhatsApp</h4>
+                <p>16 98118.1068</p>
+              </div>
+            </a>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h4>Localizacao</h4>
+                <p>Coxim - MS</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h4>Horario</h4>
+                <p>Seg - Sab, 7h - 19h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <div class="cta-box">
+            <div class="cta-box-content">
+              <div class="cta-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                </svg>
+              </div>
+              <h3>Agende sua consulta</h3>
+              <p>Clique no botao abaixo para conversar comigo diretamente pelo WhatsApp.</p>
+              <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="cta-button">
+                <span>📱</span>
+                Chamar no WhatsApp
+              </a>
+              <p class="cta-box-footer">Atendimento rapido e personalizado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <a href="#inicio" class="footer-logo">
+        <svg viewBox="0 0 28 34" fill="none">
+          <path d="M14 2C14 2 2 14 2 20a12 12 0 0024 0C26 14 14 2 14 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M10 18c0 0 2 6 6 6s4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+        </svg>
+        <span class="footer-logo-text">Tali Bordini</span>
+      </a>
+
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Servicos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+            <circle cx="17.5" cy="6.5" r="1.5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>2026 Tali Bordini · Coxim - MS · Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const headerEl = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        headerEl.classList.add('scrolled');
+      } else {
+        headerEl.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // Testimonials carousel
+    const testimonials = [
+      {
+        name: "Camila R.",
+        role: "Mae de primeira viagem",
+        text: '"A Tali foi essencial nos primeiros dias com meu bebe. Sua orientacao sobre amamentacao me deu seguranca e tranquilidade. Profissional incrivel e muito acolhedora."'
+      },
+      {
+        name: "Juliana M.",
+        role: "Paciente de Laserterapia",
+        text: '"Sofria com fissuras mamilares e a laserterapia com a Tali fez toda a diferenca. Alivio da dor e cicatrizacao rapida. Recomendo demais!"'
+      },
+      {
+        name: "Patricia S.",
+        role: "Mae em relactacao",
+        text: '"Tali me acompanhou durante todo o processo de relactacao. Sua paciencia, conhecimento e carinho foram fundamentais. Onde ciencia e colo realmente se encontram."'
+      }
+    ];
+
+    let currentTestimonial = 0;
+
+    function updateTestimonial(index) {
+      const testimonial = testimonials[index];
+      document.getElementById('carousel-text').textContent = testimonial.text;
+      document.getElementById('carousel-name').textContent = testimonial.name;
+      document.getElementById('carousel-role').textContent = testimonial.role;
+      document.getElementById('carousel-avatar').textContent = testimonial.name.charAt(0);
+
+      // Update dots
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    function initCarousel() {
+      // Create dots
+      const dotsContainer = document.getElementById('carousel-dots');
+      testimonials.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => {
+          currentTestimonial = i;
+          updateTestimonial(i);
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      // Update initial testimonial
+      updateTestimonial(0);
+
+      // Next/Previous buttons
+      document.getElementById('next-btn').addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        updateTestimonial(currentTestimonial);
+      });
+
+      document.getElementById('prev-btn').addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        updateTestimonial(currentTestimonial);
+      });
+    }
+
+    // Star ratings
+    function createStarRating(container) {
+      const html = Array(5).fill(0).map(() => `
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      `).join('');
+      container.innerHTML = html;
+    }
+
+    // Initialize on DOM ready
+    document.addEventListener('DOMContentLoaded', () => {
+      initCarousel();
+    });
+  </script>
+</body>
+</html>

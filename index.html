@@ -261,6 +261,12 @@
     nav.desktop-nav a:hover::after {
       width: 100%;
     }
+     
+    @media (min-width: 768px) {
+      .desktop-nav .cta-btn {
+        display: none;
+      }
+    }
 
     .cta-btn {
       display: none;
@@ -302,8 +308,8 @@
       font-size: 1.5rem;
     }
 
-    @media (min-width: 768px) {
-      .menu-btn {
+    @media (min-width: 1024px) {
+      #btn-nav {
         display: none;
       }
     }
@@ -583,7 +589,7 @@
 
     .hero-image img {
       width: 100%;
-      max-width: 336px;
+      /* max-width: 448px; */
       height: auto;
       border-radius: 2rem;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
@@ -711,7 +717,7 @@
 
     .about-image img {
       width: 100%;
-      max-width: 288px;
+      /* max-width: 448px; */
       height: auto;
       border-radius: 2rem;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -721,7 +727,7 @@
 
     @media (min-width: 1024px) {
       .about-image img {
-        max-width: 320px;
+        max-width: 448px;
       }
     }
 
@@ -1205,6 +1211,13 @@
         text-align: left;
       }
     }
+    @media (min-width: 1024px) {
+      .cta-section {
+        max-width: 448px;
+        width: 100%;
+        display: flex;
+      }
+    }
 
     .contact-text h3 {
       font-family: 'Playfair Display', serif;
@@ -1316,7 +1329,7 @@
 
     .cta-section {
       width: 100%;
-      max-width: 448px;
+      /* max-width: 448px; */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1570,7 +1583,7 @@
         <a href="#contato">Contato</a>
       </nav>
 
-      <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="cta-btn">
+      <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" id="btn-nav">
         <span>📱</span>
         Agendar
       </a>
@@ -1586,7 +1599,7 @@
         <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
       </nav>
-      <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="cta-btn" style="margin-top: 1rem; width: 100%; text-align: center;">
+      <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" style="margin-top: 1rem; width: 100%; text-align: center;">
         <span>📱</span>
         Agendar Consulta
       </a>
@@ -1891,7 +1904,7 @@
           <p>Entre em contato para agendar uma consulta ou tirar suas duvidas. Estou disponivel para cuidar de voce e da sua familia.</p>
 
           <div class="contact-cards">
-            <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="contact-card">
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
@@ -1899,7 +1912,7 @@
               </div>
               <div class="contact-info">
                 <h4>WhatsApp</h4>
-                <p>16 98118.1068</p>
+                <p>67 99908.3040</p>
               </div>
             </a>
 
@@ -1941,7 +1954,7 @@
               </div>
               <h3>Agende sua consulta</h3>
               <p>Clique no botao abaixo para conversar comigo diretamente pelo WhatsApp.</p>
-              <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="cta-button">
+              <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-button">
                 <span>📱</span>
                 Chamar no WhatsApp
               </a>
@@ -1974,7 +1987,7 @@
       </nav>
 
       <div class="footer-socials">
-        <a href="https://wa.me/5516981181068" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+        <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
           </svg>

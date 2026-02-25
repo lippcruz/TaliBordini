@@ -161,17 +161,28 @@
       left: 0;
       right: 0;
       z-index: 50;
-      transition: all 0.5s ease;
+      /* keep blur always active; some mobile browsers drop backdrop-filter
+         when opacity is exactly 0, so add an imperceptible alpha (.01) */
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      transition: background-color 0.5s ease, padding 0.5s ease;
+      background-color: hsla(var(--background), 0.01);
     }
 
     header.scrolled {
       background-color: hsla(var(--background), 0.95);
-      backdrop-filter: blur(12px);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       padding: 0.75rem 0;
     }
 
-    header:not(.scrolled) {
+    header.menu-open {
+      /* while the mobile menu is visible, keep the header opaque so the
+         toggle button remains legible and the filter stays on */
+      background-color: hsla(var(--background), 0.95);
+    }
+
+    header:not(.scrolled):not(.menu-open) {
+      /* technically still has a tiny alpha; see header rule above */
       background-color: transparent;
       padding: 1.25rem 0;
     }
@@ -262,12 +273,7 @@
       width: 100%;
     }
      
-    @media (min-width: 768px) {
-      .desktop-nav .cta-btn {
-        display: none;
-      }
-    }
-
+    
     .cta-btn {
       display: none;
       align-items: center;
@@ -308,22 +314,32 @@
       font-size: 1.5rem;
     }
 
-    @media (min-width: 1024px) {
-      #btn-nav {
+    /* hide hamburger on tablets/desktops but keep visible on phones even
+       when rotated. using min-device-width avoids landscape phones losing it */
+    @media (min-device-width: 768px) {
+      .menu-btn {
         display: none;
       }
     }
 
     .mobile-menu {
       display: none;
-      position: absolute;
-      width: 100%;
-      top: 100%;
+      position: fixed;
+      /* cover entire viewport but leave space for the header via padding */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 49; /* below header (z-index:50) so button stays clickable */
       background-color: hsla(var(--card), 0.98);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border-top: 1px solid hsl(var(--border));
       padding: 1.5rem;
+      /* space at top to avoid hiding beneath the header */
+      padding-top: calc(var(--header-height, 0px) + 1.5rem);
       margin-top: 0;
+      overflow-y: auto;
     }
 
     .mobile-menu.open {
@@ -679,7 +695,7 @@
     }
 
     section > .container > p {
-      margin-top: 1.25rem;
+      margin: 1.25rem 0;
       text-align: center;
       color: hsl(var(--muted-foreground));
       line-height: 1.7;
@@ -1200,6 +1216,10 @@
         align-items: center;
       }
     }
+    
+    .contact-content p {
+      margin: 1.8rem 0;
+    }
 
     .contact-text {
       flex: 1;
@@ -1254,6 +1274,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      justify-content: center; /* center cards horizontally when wrapping */
     }
 
     @media (min-width: 640px) {
@@ -1281,6 +1302,22 @@
       color: inherit;
       transition: box-shadow 0.3s ease;
       min-height: 60px;
+      flex: 1 1 15rem; /* allow cards to grow and shrink evenly */
+    }
+
+    /* switch to vertical layout on small viewports so icon sits above text */
+    @media (max-width: 640px) {
+      .contact-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .contact-icon {
+        margin-bottom: 0.75rem;
+      }
+      .contact-info h4,
+      .contact-info p {
+        margin: 0;
+      }
     }
 
     .contact-card:hover {
@@ -1583,28 +1620,31 @@
         <a href="#contato">Contato</a>
       </nav>
 
-      <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" id="btn-nav">
+      <!-- <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" id="btn-nav">
         <span>📱</span>
         Agendar
-      </a>
+      </a> -->
 
       <button class="menu-btn" id="menu-btn" aria-label="Abrir menu de navegacao" aria-controls="mobile-menu" aria-expanded="false">☰</button>
     </div>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Servicos</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" style="margin-top: 1rem; width: 100%; text-align: center;">
-        <span>📱</span>
-        Agendar Consulta
-      </a>
-    </div>
   </header>
+
+  <!-- mobile menu moved outside header to prevent height calculations from
+       including its own size (it was pushing content down and appearing
+       half‑open) -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Servicos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" style="margin-top: 1rem; width: 100%; text-align: center;">
+      <span>📱</span>
+      Agendar Consulta
+    </a>
+  </div>
 
   <!-- Main Content -->
   <main id="main-content">
@@ -1912,7 +1952,7 @@
               </div>
               <div class="contact-info">
                 <h4>WhatsApp</h4>
-                <p>67 99908.3040</p>
+                <p>(67) 99908.3040</p>
               </div>
             </a>
 
@@ -2008,15 +2048,37 @@
   </footer>
 
   <script>
-    // Header scroll effect
+    // Header scroll effect and dimension tracking
     const headerEl = document.getElementById('header');
-    window.addEventListener('scroll', () => {
+
+    // keep a CSS variable with the current header height so the mobile menu
+    // can position itself correctly under it.
+    function updateHeaderHeight() {
+      const height = headerEl.offsetHeight;
+      document.documentElement.style.setProperty('--header-height', height + 'px');
+    }
+
+    function onScroll() {
       if (window.scrollY > 40) {
         headerEl.classList.add('scrolled');
       } else {
         headerEl.classList.remove('scrolled');
       }
-    });
+      updateHeaderHeight();
+      // if the user scrolls while the menu is open, close it to prevent
+      // weird transparency/blur flicker. this is optional now because the
+      // tiny alpha applied to the header bg keeps the blur alive.
+      /*
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        headerEl.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      }
+      */
+    }
+
+    window.addEventListener('scroll', onScroll);
 
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
@@ -2025,15 +2087,58 @@
     menuBtn.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', isOpen);
+      headerEl.classList.toggle('menu-open', isOpen);
+      // lock scrolling of the background when menu is open
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      // update header height when opening (in case padding changed)
+      updateHeaderHeight();
     });
 
     // Close mobile menu when clicking a link
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', false);
+        menuBtn.setAttribute('aria-expanded', 'false');
+        headerEl.classList.remove('menu-open');
+        document.body.style.overflow = '';
       });
     });
+
+    // close menu on resize if we transition to desktop view
+    window.addEventListener('resize', () => {
+      updateHeaderHeight();
+      if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        headerEl.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // click outside to close (header and menu both count as inside).
+    document.addEventListener('click', (e) => {
+      if (mobileMenu.classList.contains('open') &&
+          !headerEl.contains(e.target) &&
+          !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        headerEl.classList.remove('menu-open');
+      }
+    });
+
+    // allow Esc key to dismiss menu
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        headerEl.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        menuBtn.focus();
+      }
+    });
+
+    // initialize dimensions on load
+    updateHeaderHeight();
 
     // Testimonials carousel
     const testimonials = [

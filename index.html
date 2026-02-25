@@ -193,7 +193,14 @@
       justify-content: space-between;
       max-width: 80rem;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 2rem;
+      gap: 1rem; /* space between logo, nav and button */
+    }
+
+    @media (min-width: 1024px) {
+      .header-content {
+        padding: 0 2rem;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -205,10 +212,27 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.625rem;
+      gap: 1rem; /* a bit more breathing room between icon and text */
       text-decoration: none;
       color: hsl(var(--primary));
       transition: transform 0.3s ease;
+    }
+
+    /* Logo images: keep the intended width but preserve aspect ratio */
+    .logo img,
+    .footer-logo img {
+      width: 28px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-logo img {
+      width: 52px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     .logo:hover {
@@ -233,7 +257,7 @@
       align-items: center;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       nav.desktop-nav {
         display: flex;
       }
@@ -299,7 +323,7 @@
       box-shadow: 0 20px 25px -5px rgba(218, 99, 68, 0.2);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .cta-btn {
         display: inline-flex;
       }
@@ -314,9 +338,8 @@
       font-size: 1.5rem;
     }
 
-    /* hide hamburger on tablets/desktops but keep visible on phones even
-       when rotated. using min-device-width avoids landscape phones losing it */
-    @media (min-device-width: 768px) {
+    /* hide hamburger on desktops only; keep visible on phones and tablets */
+    @media (min-device-width: 1024px) {
       .menu-btn {
         display: none;
       }
@@ -347,7 +370,14 @@
       animation: fadeIn 0.3s ease;
     }
 
-    @media (min-width: 768px) {
+    /* CTA inside mobile menu: reuse main .cta-button styles but center it */
+    .mobile-menu .cta-button {
+      display: inline-flex;
+      margin: 1.5rem auto 0;
+      padding: 0.75rem 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
       .mobile-menu {
         display: none !important;
       }
@@ -1605,10 +1635,7 @@
   <header id="header" role="banner">
     <div class="header-content">
       <a href="#inicio" class="logo">
-        <svg viewBox="0 0 28 34" fill="none">
-          <path d="M14 2C14 2 2 14 2 20a12 12 0 0024 0C26 14 14 2 14 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-          <path d="M10 18c0 0 2 6 6 6s4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-        </svg>
+        <img src="logo-symbol.png" alt="Símbolo de Tali Bordini">
         <span class="logo-text">Tali Bordini</span>
       </a>
 
@@ -1640,8 +1667,10 @@
       <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-btn" style="margin-top: 1rem; width: 100%; text-align: center;">
-      <span>📱</span>
+    <a href="https://wa.me/5567999083040" target="_blank" rel="noopener noreferrer" class="cta-button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
       Agendar Consulta
     </a>
   </div>
@@ -1653,10 +1682,7 @@
     <div class="container hero-content">
       <div class="hero-text">
         <div class="hero-logo">
-          <svg width="52" height="64" viewBox="0 0 28 34" fill="none">
-            <path d="M14 2C14 2 2 14 2 20a12 12 0 0024 0C26 14 14 2 14 2z" stroke="currentColor" stroke-width="1" fill="none"/>
-            <path d="M10 18c0 0 2 6 6 6s4-4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.4"/>
-          </svg>
+          <img src="logo-symbol.png" alt="Símbolo de Tali Bordini">
         </div>
 
         <h1 class="hero-title animate-fade-in-up">Tali Bordini</h1>
@@ -2011,10 +2037,7 @@
   <footer role="contentinfo">
     <div class="footer-content">
       <a href="#inicio" class="footer-logo">
-        <svg viewBox="0 0 28 34" fill="none">
-          <path d="M14 2C14 2 2 14 2 20a12 12 0 0024 0C26 14 14 2 14 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-          <path d="M10 18c0 0 2 6 6 6s4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-        </svg>
+        <img src="logo-symbol.png" alt="Símbolo de Tali Bordini">
         <span class="footer-logo-text">Tali Bordini</span>
       </a>
 
